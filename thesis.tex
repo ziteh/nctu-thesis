@@ -1,72 +1,109 @@
-\documentclass[oneside]{ntuthesis}
-
+\documentclass[oneside,zh]{nctuthesis}
+\usepackage{enumitem}
 \usepackage{times}
 \usepackage{verbatim}
 \usepackage{color}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{array}
-\usepackage{pdfpages} % include outside .pdf
+\usepackage{pdfpages} % include inserted .pdf to page no.
 \usepackage{wallpaper} % watermark
 
 % Format the refs
-\usepackage[sort,comma]{natbib}
+\usepackage[sort]{natbib}
 \usepackage[hidelinks]{hyperref}
+
+% For Cross ref
+\usepackage{xr}
+
 
 % For the tree
 \usepackage{tikz}
 \usepackage{tikz-qtree}
 
+% For code display
+\usepackage{listings}
+
+% For the APA table
+\usepackage{adjustbox}
+\usepackage{multirow,booktabs,setspace,caption}
+\usepackage{rotating}
+\usepackage{dcolumn}
+\newcolumntype{z}{D{.}{.}{3}} % for decimal dot alignment
+
+% For hyperlink
+\usepackage{hyperref}
+
 % For barchart
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+
+% For setting counters of figure and table
+\usepackage{chngcntr}
 
 % Using the tex-text mapping for ligatures etc.
 \defaultfontfeatures{Mapping=tex-text}
 
 % Set the default fonts
 \setmainfont{Times New Roman}
-\setCJKmainfont{標楷體}
+\setCJKmainfont{TW-Kai} %modify for overleaf service
 
 % Your information goes here
-\input{ntuvars}
+\input{nctuvars}
 
 \begin{document}
 
-% 臺大論文浮水印
-\input{watermark.tex}
+% 論文浮水印 如需浮水印時取消此行註解
+% \input{src/with-watermark.tex}
 
 \hypersetup{pageanchor=false}
 
 \frontmatter
 \pagenumbering{gobble}
-\makecover
 
+% 此處不自動產生交大封面改採插入pdf封面故註解
+% \makecover
+
+%以插入pdf檔方式加入封面及書名頁
+\includepdf[pages={1}]{pdfs/cover.pdf}
+\includepdf[pages={1}]{pdfs/first_page.pdf}
+
+% 開始編羅馬數字頁碼
 \clearpages
 \setcounter{page}{1}
 \hypersetup{pageanchor=true}
 \pagenumbering{roman}
 \phantomsection
 
-% generate certification
-% \makecertification
-% or include scanned pdf
-\addcontentsline{toc}{chapter}{口試委員會審定書}
-\includepdf[pages={1}]{pdfs/cert.pdf}
+%插入論文審定書 著作權審定書等等
+\addcontentsline{toc}{chapter}{中文論文口試委員會審定書}
+\includepdf[pages={1}, pagecommand={}]{pdfs/ch.pdf}
+\addcontentsline{toc}{chapter}{Thesis Certificate}
+\includepdf[pages={1}, pagecommand={}]{pdfs/en.pdf}
+\addcontentsline{toc}{chapter}{論文著作權授權書}
+\includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
 
-\input{acknowledgements}
+% 摘要 致謝
 \input{abstract}
+\input{acknowledgements}
 
-% Table of Content
+
+% % Table of Content
 \clearpages
 \tableofcontents
-% List of Figures
+
+% % List of Figures
 \clearpages
 \listoffigures
-% List of Tables
+
+% % List of Tables
 \clearpages
 \listoftables
 
 \mainmatter
+% % tables and figures counter without chapter
+\counterwithout{table}{chapter}
+\counterwithout{figure}{chapter}
 
 % Your thesis goes here
 \input{chapters/introduction}
@@ -75,9 +112,7 @@
 \input{chapters/experiment}
 \input{chapters/conclusion}
 
-\@startappendix
 
-\input{chapters/dataset}
 
 \backmatter
 
@@ -88,5 +123,8 @@
 
 % Your bibliography goes here
 \bibliography{thesis}
+\@startappendix
 
+% 交大圖書館規定附錄在參考文獻之後
+\input{chapters/otherbib}
 \end{document}

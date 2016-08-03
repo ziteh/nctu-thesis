@@ -8,7 +8,7 @@ RM=rm -f
 PDF_PWD=rdkRq8u8lAzARCIPa8Us
 
 # files to compile
-files := $(wildcard *.tex) ntuthesis.cls thesis.bib
+files := $(wildcard *.tex) nctuthesis.cls thesis.bib
 # content files
 files := $(files) $(wildcard chapters/*.tex) $(wildcard tables/*.tex) $(wildcard figures/*.tex)
 # embeded files
@@ -26,7 +26,7 @@ $(MAIN).pdf: $(files) src/without-watermark.tex
 	$(LATEX) $(MAIN)
 	$(RM) watermark.tex
 
-ntulib: pdfs/watermark.pdf src/with-watermark.tex $(files)
+nctulib: pdfs/watermark.pdf src/with-watermark.tex $(files)
 	cp src/with-watermark.tex watermark.tex
 	$(LATEX) $(MAIN)
 	$(BIBTEX) $(MAIN)
@@ -39,7 +39,7 @@ pdfs:
 	mkdir pdfs
 
 pdfs/watermark.pdf: | pdfs
-	curl "http://etds.lib.ntu.edu.tw/files/watermark.pdf" -o "pdfs/watermark.pdf"
+	curl "http://www.lib.nctu.edu.tw/attach/download/id-163/" -o "pdfs/watermark.pdf"
 
 clean:
 	$(RM) *.log *.aux *.dvi *.lof *.lot *.toc *.bbl *.blg *.out

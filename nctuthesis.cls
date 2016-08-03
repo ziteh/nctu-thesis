@@ -1,4 +1,4 @@
-% author: Tz-Huan Huang [http://www.csie.ntu.edu.tw/~tzhuan]
+% author: Po-Hao Huang [https://github.com/Po-haoHuang]
 
 % ----------------------------------------------------------------------------
 % "THE CHOCOLATE-WARE LICENSE":
@@ -8,7 +8,7 @@
 % ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ntuthesis}[2013/04/23 Thesis template for National Taiwan University]
+\ProvidesClass{nctuthesis}[2016/08/03 Thesis template for National Chiao Tung University]
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
@@ -29,7 +29,7 @@
 \LoadClass[a4paper,12pt,oneside]{book}
 
 % Required packages
-\RequirePackage[top=3cm,left=3cm,bottom=2cm,right=3cm]{geometry}
+\RequirePackage[top=2.5cm,left=2.5cm,bottom=2.5cm,right=2.5cm]{geometry}
 \RequirePackage{xeCJK}
 \RequirePackage{setspace}
 \RequirePackage{titlesec}
@@ -61,72 +61,72 @@
 
 \DeclareRobustCommand{\clearpages}{\if@openright\cleardoublepage\else\clearpage\fi}
 
-\DeclareRobustCommand{\makecover}{
-  \begin{titlepage}
-    \vspace{1cm}
-    \begin{singlespace}
-    \begin{center}
-      \fontsize{18}{27}\selectfont
-      \@universityzh\@collegezh\@institutezh\par
-        \@typezh{}\@classzh\par
-      {\fontsize{14}{21}\selectfont
-        \@instituteen\par
-        \@collegeen\par}
-      {\fontsize{16}{24}\selectfont
-        \@universityen\par
-        \@typeen{} \@classen\par}
-      \vspace{\fill}
-      \@titlezh\par
-      \@titleen\par
-      \vspace{\fill}
-      \@authorzh\\
-      \@authoren\par
-      \vspace{2cm}
-      指導教授：\@advisorzh\\
-      Advisor: \@advisoren\par
-      \vspace{1.5cm}
-      中華民國 \@yearzh 年 \@monthzh 月\\
-      \@monthen, \@yearen
-    \end{center}
-    \end{singlespace}
-    \vspace{1cm}
-  \end{titlepage}
-}
+% \DeclareRobustCommand{\makecover}{
+%   \begin{titlepage}
+%     \vspace{1cm}
+%     \begin{singlespace}
+%     \begin{center}
+%       \fontsize{18}{27}\selectfont
+%       \@universityzh\@collegezh\@institutezh\par
+%         \@typezh{}\@classzh\par
+%       {\fontsize{14}{21}\selectfont
+%         \@instituteen\par
+%         \@collegeen\par}
+%       {\fontsize{16}{24}\selectfont
+%         \@universityen\par
+%         \@typeen{} \@classen\par}
+%       \vspace{\fill}
+%       \@titlezh\par
+%       \@titleen\par
+%       \vspace{\fill}
+%       \@authorzh\\
+%       \@authoren\par
+%       \vspace{2cm}
+%       指導教授：\@advisorzh\\
+%       Advisor: \@advisoren\par
+%       \vspace{1.5cm}
+%       中華民國 \@yearzh 年 \@monthzh 月\\
+%       \@monthen, \@yearen
+%     \end{center}
+%     \end{singlespace}
+%     \vspace{1cm}
+%   \end{titlepage}
+% }
 
 
-\DeclareRobustCommand{\makecertification}{
-  \clearpages
-  \begin{singlespace}
-  \begin{center}
-    \fontsize{24}{36}\selectfont\@universityzh\@typezh{}學位\@classzh\\
-    口試委員會審定書\par
-    \vspace{0.5cm}
-    {\fontsize{20}{30}\selectfont\@titlezh\par\@titleen\par}
-  \end{center}
-  \addcontentsline{toc}{chapter}{口試委員會審定書}
-  \vspace{1cm}
-  \fontsize{15}{24}\selectfont
-\hspace{30pt}本論文係\@authorzh{}君 (\@studentid)
-在\@universityzh\@institutezh{}完成之\@typezh{}學位\@classzh，%
-於民國 \@yearzh 年 \@monthzh 月 \@day 日%
-承下列考試委員審查通過及口試及格，特此證明\par
-  \end{singlespace}
-  \vspace{\fill}
-  \begin{center}
-  \begin{doublespace}
-  \fontsize{15}{30}\selectfont
-  \begin{tabular}{p{2.75cm}p{12.5cm}}
-    \raisebox{30pt}{口試委員：} & \rule{11.5cm}{1pt} \\
-    & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
-    & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
-    & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
-    & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
-    \raisebox{5pt}{所\hspace{15pt}長：} & \rule{8.5cm}{1pt}
-  \end{tabular}
-  \end{doublespace}
-  \end{center}
-  \vspace*{-1cm}
-}
+% \DeclareRobustCommand{\makecertification}{
+%   \clearpages
+%   \begin{singlespace}
+%   \begin{center}
+%     \fontsize{24}{36}\selectfont\@universityzh\@typezh{}學位\@classzh\\
+%     口試委員會審定書\par
+%     \vspace{0.5cm}
+%     {\fontsize{20}{30}\selectfont\@titlezh\par\@titleen\par}
+%   \end{center}
+%   \addcontentsline{toc}{chapter}{口試委員會審定書}
+%   \vspace{1cm}
+%   \fontsize{15}{24}\selectfont
+% \hspace{30pt}本論文係\@authorzh{}君 (\@studentid)
+% 在\@universityzh\@institutezh{}完成之\@typezh{}學位\@classzh，%
+% 於民國 \@yearzh 年 \@monthzh 月 \@day 日%
+% 承下列考試委員審查通過及口試及格，特此證明\par
+%   \end{singlespace}
+%   \vspace{\fill}
+%   \begin{center}
+%   \begin{doublespace}
+%   \fontsize{15}{30}\selectfont
+%   \begin{tabular}{p{2.75cm}p{12.5cm}}
+%     \raisebox{30pt}{口試委員：} & \rule{11.5cm}{1pt} \\
+%     & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
+%     & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
+%     & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
+%     & \rule{5cm}{1pt}\hspace{1.5cm}\rule{5cm}{1pt} \\
+%     \raisebox{5pt}{所\hspace{15pt}長：} & \rule{8.5cm}{1pt}
+%   \end{tabular}
+%   \end{doublespace}
+%   \end{center}
+%   \vspace*{-1cm}
+% }
 
 \newenvironment{quotationpage}[1]
   {\clearpages
