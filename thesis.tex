@@ -1,4 +1,4 @@
-\documentclass[oneside,zh]{nctuthesis}
+\documentclass[oneside, zh]{nfuthesis}
 \usepackage{enumitem}
 \usepackage{times}
 \usepackage{verbatim}
@@ -6,16 +6,17 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{array}
-\usepackage{pdfpages} % include inserted .pdf to page no.
+\usepackage{pdfpages}  % include inserted .pdf to page no.
 \usepackage{wallpaper} % watermark
+\usepackage{amsmath}   % math 
+% \usepackage{mathtools} % math, 'mathtools' is an extention of 'amsmath'
 
 % Format the refs
-\usepackage[sort]{natbib}
+\usepackage[sort, square, comma, compress]{natbib} % 參考文獻引用。排序、方括號、逗號分隔、壓縮。
 \usepackage[hidelinks]{hyperref}
 
 % For Cross ref
 \usepackage{xr}
-
 
 % For the tree
 \usepackage{tikz}
@@ -30,6 +31,10 @@
 \usepackage{rotating}
 \usepackage{dcolumn}
 \newcolumntype{z}{D{.}{.}{3}} % for decimal dot alignment
+
+% Remove caption separator of tables and figures
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
 
 % For hyperlink
 \usepackage{hyperref}
@@ -46,15 +51,12 @@
 
 % Set the default fonts
 \setmainfont{Times New Roman}
-\setCJKmainfont{TW-Kai} %modify for overleaf service
+\setCJKmainfont{TW-Kai} % modify for overleaf service
 
 % Your information goes here
 \input{nctuvars}
 
 \begin{document}
-
-% 論文浮水印 如需浮水印時取消此行註解
-% \input{src/with-watermark.tex}
 
 \hypersetup{pageanchor=false}
 
@@ -64,7 +66,7 @@
 % 此處不自動產生交大封面改採插入pdf封面故註解
 % \makecover
 
-%以插入pdf檔方式加入封面及書名頁
+% 以插入pdf檔方式加入封面及書名頁
 \includepdf[pages={1}]{pdfs/cover.pdf}
 \includepdf[pages={1}]{pdfs/first_page.pdf}
 
@@ -75,7 +77,7 @@
 \pagenumbering{roman}
 \phantomsection
 
-%插入論文審定書 著作權審定書等等
+% 插入論文審定書 著作權審定書等等
 \addcontentsline{toc}{chapter}{中文論文口試委員會審定書}
 \includepdf[pages={1}, pagecommand={}]{pdfs/ch.pdf}
 \addcontentsline{toc}{chapter}{Thesis Certificate}
@@ -83,27 +85,34 @@
 \addcontentsline{toc}{chapter}{論文著作權授權書}
 \includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
 
-% 摘要 致謝
+% 論文浮水印 如不需要浮水印時註解此行
+\input{src/with-watermark.tex}
+
+% 摘要、致謝
 \input{abstract}
 \input{acknowledgements}
 
 
-% % Table of Content
+% Table of Content
 \clearpages
 \tableofcontents
 
-% % List of Figures
+% List of Figures
 \clearpages
 \listoffigures
 
-% % List of Tables
+% List of Tables
 \clearpages
 \listoftables
 
 \mainmatter
-% % tables and figures counter without chapter
-\counterwithout{table}{chapter}
-\counterwithout{figure}{chapter}
+
+% tables and figures counter within chapter
+\counterwithin{table}{chapter}
+\counterwithin{figure}{chapter}
+
+% Math equations counter winout chapter
+\counterwithout{equation}{chapter}
 
 % Your thesis goes here
 \input{chapters/introduction}
@@ -112,14 +121,12 @@
 \input{chapters/experiment}
 \input{chapters/conclusion}
 
-
-
 \backmatter
 
 \clearpages
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliographystyle{apa}
+\bibliographystyle{ieeetr} % 參考文獻格式選擇
 
 % Your bibliography goes here
 \bibliography{thesis}

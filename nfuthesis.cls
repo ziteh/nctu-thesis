@@ -1,4 +1,5 @@
 % author: Po-Hao Huang [https://github.com/Po-haoHuang]
+%         ziteh [https://github.com/ziteh]
 
 % ----------------------------------------------------------------------------
 % "THE CHOCOLATE-WARE LICENSE":
@@ -8,7 +9,7 @@
 % ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{nctuthesis}[2016/08/03 Thesis template for National Chiao Tung University]
+\ProvidesClass{nfuthesis}[2023/02/19 Thesis template for National Formosa University]
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
@@ -18,18 +19,19 @@
 \DeclareOption{phd}{\gdef\@typeen{Doctoral}\gdef\@typezh{博士}\gdef\@classen{Dissertation}}
 \DeclareOption{proposal}{\gdef\@typeen{Proposal for Doctoral}\gdef\@typezh{博士論文計畫提案書}\gdef\@classen{Dissertation}\gdef\@classzh{}}
 
-\def\@doubleline{1.9}
-\def\@onehalfline{1.62}
+\def\@doubleline{1.9}   % 雙行間距
+\def\@onehalfline{1.62} % 1.5行間距
+\def\@oneline{1.05}     % 單行間距
 \DeclareRobustCommand{\@setspacing}{\setstretch{\@doubleline}}
 \newif\ifzh
 \zhfalse
-\DeclareOption{zh}{\gdef\@setspacing{\setstretch{\@onehalfline}}\zhtrue}
+\DeclareOption{zh}{\gdef\@setspacing{\setstretch{\@oneline}}\zhtrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass[a4paper,12pt,oneside]{book}
 
 % Required packages
-\RequirePackage[top=2.5cm,left=2.5cm,bottom=2.5cm,right=2.5cm]{geometry}
+\RequirePackage[top=2.5cm,left=3cm,bottom=2.5cm,right=3cm]{geometry}
 \RequirePackage{xeCJK}
 \RequirePackage{setspace}
 \RequirePackage{titlesec}
@@ -193,10 +195,10 @@
   \let\CJKpunctsymbol\CJKoldpunctsymbol}
 \newcommand\zhbf[1]{\CJKfakebold{#1}}
 
-% set Chinese version
+% Set Chinese version
 \ifzh
 
-  % set two-character indentation
+  % Set two-character indentation
   \setlength{\parindent}{2em}
 
   % Very Naive Chinese Number
@@ -224,13 +226,12 @@
   \fi\fi\fi\fi\fi\fi\fi\fi\fi
   }
 
-  \titleformat{\chapter}{\centering\Huge\bfseries}{第\naiveZhNum{\thechapter}章}{1em}{}
+  \titleformat{\chapter}{\centering\Huge\bfseries\vspace*{-3.5cm}}{第\naiveZhNum{\thechapter}章}{1em}{} % 章標題
   \titlecontents{chapter}[0em]{}{\makebox[4.1em][l]{第\naiveZhNum{\thecontentslabel}章}}{}{\cftdotfill{\cftdotsep}\contentspage}
 
   \floatname{algorithm}{演算法}
   \renewcommand{\algorithmicrequire}{\textbf{輸入：}}
   \renewcommand{\algorithmicensure}{\textbf{輸出：}}
-
 
   \renewcommand{\contentsname}{目錄}
   \renewcommand{\listfigurename}{圖目錄}
