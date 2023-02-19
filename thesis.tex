@@ -106,9 +106,13 @@
 \listoftables
 
 \mainmatter
-% % tables and figures counter without chapter
-\counterwithout{table}{chapter}
-\counterwithout{figure}{chapter}
+
+% tables and figures counter within chapter
+\counterwithin{table}{chapter}
+\counterwithin{figure}{chapter}
+
+% Math equations counter winout chapter
+\counterwithout{equation}{chapter}
 
 % Your thesis goes here
 \input{chapters/introduction}
