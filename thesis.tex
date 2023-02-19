@@ -58,9 +58,6 @@
 
 \begin{document}
 
-% 論文浮水印 如需浮水印時取消此行註解
-% \input{src/with-watermark.tex}
-
 \hypersetup{pageanchor=false}
 
 \frontmatter
@@ -87,6 +84,9 @@
 \includepdf[pages={1}, pagecommand={}]{pdfs/en.pdf}
 \addcontentsline{toc}{chapter}{論文著作權授權書}
 \includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
+
+% 論文浮水印 如不需要浮水印時註解此行
+\input{src/with-watermark.tex}
 
 % 摘要、致謝
 \input{abstract}
