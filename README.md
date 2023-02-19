@@ -1,29 +1,50 @@
-交通大學碩博士論文 XeLaTeX 模版
-==========
+# 虎尾科大碩博士論文 XeLaTeX 模版
 
-
-前言
-----------
+## 前言
 
 這個模版的前身是 [shaform](http://github.com/shaform) 的 [臺灣大學碩博士論文 XeLaTeX 模版](https://github.com/shaform/ntu-thesis) 與 [tzhuan](http://github.com/tzhuan) 的
 [臺灣大學碩博士論文 XeLaTeX 模板](https://github.com/tzhuan/ntu-thesis)。
 同時也整合了一些 [qcl](https://github.com/qcl) 針對
 [qcl-master-thesis](https://github.com/qcl/qcl-master-thesis) 所做的修改。
-其中，他也參考了 [台大碩博士論文LaTeX範本](https://code.google.com/p/ntu-thesis-latex-template/)。
-最後則由 [Po-haoHuang](https://github.com/Po-haoHuang) 在交通大學撰寫論文期間又做了些許更動，使其成為適合交通大學的模板。
+其中，他也參考了[台大碩博士論文 LaTeX 範本](https://code.google.com/p/ntu-thesis-latex-template/)。
+再來則由 [Po-haoHuang](https://github.com/Po-haoHuang) 在交通大學撰寫論文期間又做了些許更動，使其成為適合[交通大學的模板](https://github.com/Po-haoHuang/nctu-thesis)。
+最後由 [ZiTe](https://github.com/ziteh) 撰寫碩士論文時修改成適合虎尾科大的格式。
 
+## 用法
 
-下載
-----------
-您可以直接 clone 這個 git repository [點這裡](https://github.com/Po-haoHuang/nctu-thesis)。
+本模板可以使用 [Overleaf](https://www.overleaf.com) 線上服務進行編譯，對於不想自己處理 LaTeX 環境的人很方便。
 
+想要在本機編譯的話，可以考慮 [TeX Live](https://www.tug.org/texlive/)+[TeX studio](https://www.texstudio.org/) 的組合，[VS Code](https://code.visualstudio.com/) 上也有一些 LaTeX 的相關插件，或使用 [`Makefile`](./Makefile)（未實際測試過）。
 
-說明
-----------
-請參考 [wiki](https://github.com/shaform/ntu-thesis/wiki) 的說明。
+:heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX*** 以支援中文。主編譯檔案爲 [`thesis.tex`](./thesis.tex)
 
+## 下載
 
-備註
-----------
-本模板的使用編譯是在[Overleaf](https://www.overleaf.com)線上服務的環境上執行，本地端編譯或是Makefile檔裡面的指令都未經測試。
-參考文獻可利用Google學術搜尋的導入bibtex。
+您可以用以下任一種方式下載此模板：
+- 點擊右上角綠色的「Code」後點擊「Download ZIP」。
+- 使用 git clone 指令。
+
+## 參考
+
+這裡列出一些可以參考的文章或實用的工具，對於使用 LaTeX 時很有幫助。
+
+### 符號清單
+1. [List of LaTeX mathematical symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+1. [Symbol table](https://www.overleaf.com/latex/templates/symbol-table/fhqmttqvrnhk)
+
+### 數學
+1. [編寫數學公式](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+
+### 視覺化公式編輯器
+1. [公式編輯器](https://www.latexlive.com/##)
+1. [方程式編輯器](https://editor.codecogs.com/)
+1. [手寫辨識](https://webdemo.myscript.com/views/math/index.html)
+
+### 參考文獻管理
+1. [Mendeley](https://www.mendeley.com/search/)
+1. [Zotero](https://www.zotero.org/)
+1. [EndNote](https://endnote.com/)
+
+## 備註
+
+shaform 版的 [wiki](https://github.com/shaform/ntu-thesis/wiki)
