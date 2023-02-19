@@ -30,7 +30,7 @@
 \LoadClass[a4paper,12pt,oneside]{book}
 
 % Required packages
-\RequirePackage[top=2.5cm,left=2.5cm,bottom=2.5cm,right=2.5cm]{geometry}
+\RequirePackage[top=2.5cm,left=3cm,bottom=2.5cm,right=3cm]{geometry}
 \RequirePackage{xeCJK}
 \RequirePackage{setspace}
 \RequirePackage{titlesec}
