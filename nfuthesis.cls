@@ -1,4 +1,5 @@
 % author: Po-Hao Huang [https://github.com/Po-haoHuang]
+%         ziteh [https://github.com/ziteh]
 
 % ----------------------------------------------------------------------------
 % "THE CHOCOLATE-WARE LICENSE":
@@ -194,10 +195,10 @@
   \let\CJKpunctsymbol\CJKoldpunctsymbol}
 \newcommand\zhbf[1]{\CJKfakebold{#1}}
 
-% set Chinese version
+% Set Chinese version
 \ifzh
 
-  % set two-character indentation
+  % Set two-character indentation
   \setlength{\parindent}{2em}
 
   % Very Naive Chinese Number
@@ -231,7 +232,6 @@
   \floatname{algorithm}{演算法}
   \renewcommand{\algorithmicrequire}{\textbf{輸入：}}
   \renewcommand{\algorithmicensure}{\textbf{輸出：}}
-
 
   \renewcommand{\contentsname}{目錄}
   \renewcommand{\listfigurename}{圖目錄}
