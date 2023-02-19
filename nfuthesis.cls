@@ -18,12 +18,13 @@
 \DeclareOption{phd}{\gdef\@typeen{Doctoral}\gdef\@typezh{博士}\gdef\@classen{Dissertation}}
 \DeclareOption{proposal}{\gdef\@typeen{Proposal for Doctoral}\gdef\@typezh{博士論文計畫提案書}\gdef\@classen{Dissertation}\gdef\@classzh{}}
 
-\def\@doubleline{1.9}
-\def\@onehalfline{1.62}
+\def\@doubleline{1.9}   % 雙行間距
+\def\@onehalfline{1.62} % 1.5行間距
+\def\@oneline{1.05}     % 單行間距
 \DeclareRobustCommand{\@setspacing}{\setstretch{\@doubleline}}
 \newif\ifzh
 \zhfalse
-\DeclareOption{zh}{\gdef\@setspacing{\setstretch{\@onehalfline}}\zhtrue}
+\DeclareOption{zh}{\gdef\@setspacing{\setstretch{\@oneline}}\zhtrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass[a4paper,12pt,oneside]{book}
