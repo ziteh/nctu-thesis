@@ -8,7 +8,7 @@ RM=rm -f
 PDF_PWD=rdkRq8u8lAzARCIPa8Us
 
 # files to compile
-files := $(wildcard *.tex) nctuthesis.cls thesis.bib
+files := $(wildcard *.tex) nfuthesis.cls thesis.bib
 # content files
 files := $(files) $(wildcard chapters/*.tex) $(wildcard tables/*.tex) $(wildcard figures/*.tex)
 # embeded files

@@ -8,7 +8,7 @@
 % ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{nctuthesis}[2016/08/03 Thesis template for National Chiao Tung University]
+\ProvidesClass{nfuthesis}[2023/02/19 Thesis template for National Formosa University]
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
