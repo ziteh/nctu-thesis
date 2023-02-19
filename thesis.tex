@@ -51,7 +51,7 @@
 
 % Set the default fonts
 \setmainfont{Times New Roman}
-\setCJKmainfont{TW-Kai} %modify for overleaf service
+\setCJKmainfont{TW-Kai} % modify for overleaf service
 
 % Your information goes here
 \input{nctuvars}
@@ -69,7 +69,7 @@
 % 此處不自動產生交大封面改採插入pdf封面故註解
 % \makecover
 
-%以插入pdf檔方式加入封面及書名頁
+% 以插入pdf檔方式加入封面及書名頁
 \includepdf[pages={1}]{pdfs/cover.pdf}
 \includepdf[pages={1}]{pdfs/first_page.pdf}
 
@@ -80,7 +80,7 @@
 \pagenumbering{roman}
 \phantomsection
 
-%插入論文審定書 著作權審定書等等
+% 插入論文審定書 著作權審定書等等
 \addcontentsline{toc}{chapter}{中文論文口試委員會審定書}
 \includepdf[pages={1}, pagecommand={}]{pdfs/ch.pdf}
 \addcontentsline{toc}{chapter}{Thesis Certificate}
@@ -88,20 +88,20 @@
 \addcontentsline{toc}{chapter}{論文著作權授權書}
 \includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
 
-% 摘要 致謝
+% 摘要、致謝
 \input{abstract}
 \input{acknowledgements}
 
 
-% % Table of Content
+% Table of Content
 \clearpages
 \tableofcontents
 
-% % List of Figures
+% List of Figures
 \clearpages
 \listoffigures
 
-% % List of Tables
+% List of Tables
 \clearpages
 \listoftables
 
