@@ -1,5 +1,4 @@
-% author: Po-Hao Huang [https://github.com/Po-haoHuang]
-%         ziteh [https://github.com/ziteh]
+% author: ziteh [https://github.com/ziteh]
 
 % ----------------------------------------------------------------------------
 % "THE CHOCOLATE-WARE LICENSE":
@@ -13,9 +12,9 @@
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
-\DeclareRobustCommand{\@typezh}{碩士}
+\DeclareRobustCommand{\@typezh}{碩\; 士\; }
 \DeclareRobustCommand{\@classen}{Thesis}
-\DeclareRobustCommand{\@classzh}{論文}
+\DeclareRobustCommand{\@classzh}{論\; 文}
 \DeclareOption{phd}{\gdef\@typeen{Doctoral}\gdef\@typezh{博士}\gdef\@classen{Dissertation}}
 \DeclareOption{proposal}{\gdef\@typeen{Proposal for Doctoral}\gdef\@typezh{博士論文計畫提案書}\gdef\@classen{Dissertation}\gdef\@classzh{}}
 
@@ -63,38 +62,45 @@
 
 \DeclareRobustCommand{\clearpages}{\if@openright\cleardoublepage\else\clearpage\fi}
 
-% \DeclareRobustCommand{\makecover}{
-%   \begin{titlepage}
-%     \vspace{1cm}
-%     \begin{singlespace}
-%     \begin{center}
-%       \fontsize{18}{27}\selectfont
-%       \@universityzh\@collegezh\@institutezh\par
-%         \@typezh{}\@classzh\par
-%       {\fontsize{14}{21}\selectfont
-%         \@instituteen\par
-%         \@collegeen\par}
-%       {\fontsize{16}{24}\selectfont
-%         \@universityen\par
-%         \@typeen{} \@classen\par}
-%       \vspace{\fill}
-%       \@titlezh\par
-%       \@titleen\par
-%       \vspace{\fill}
-%       \@authorzh\\
-%       \@authoren\par
-%       \vspace{2cm}
-%       指導教授：\@advisorzh\\
-%       Advisor: \@advisoren\par
-%       \vspace{1.5cm}
-%       中華民國 \@yearzh 年 \@monthzh 月\\
-%       \@monthen, \@yearen
-%     \end{center}
-%     \end{singlespace}
-%     \vspace{1cm}
-%   \end{titlepage}
-% }
-
+% 封面格式
+\DeclareRobustCommand{\makecover}{
+  \begin{titlepage}
+    \vspace{1cm}
+    \begin{singlespace}
+    \begin{center}
+      \fontsize{36}{36}\selectfont
+      \@universityzh\par
+      \fontsize{28}{52}\selectfont
+      \@institutezh\par
+      \vspace{1cm}
+      \fontsize{24}{32}\selectfont
+      \@typezh{}\@classzh\par
+      % {\fontsize{14}{21}\selectfont
+      %   \@instituteen\par
+      %   \@collegeen\par}
+      % {\fontsize{16}{24}\selectfont
+      %   \@universityen\par
+      %   \@typeen{} \@classen\par}
+      % \vspace{\fill}
+      \vspace{3.25cm}
+      \fontsize{20}{32}\selectfont
+      \@titlezh\par
+      \textbf{\@titleen}\par
+      \vspace{\fill}
+      \fontsize{18}{27}\selectfont
+      \begin{tabular}{cc}
+      研\enspace 究\enspace 生： & \@authorzh \\
+      指導教授：                 & \@advisorzh \\
+      \end{tabular} \\
+      \vspace{2cm}
+      \fontsize{16}{16}\selectfont
+      中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
+      % \@monthen, \@yearen
+    \end{center}
+    \end{singlespace}
+    \vspace{1cm}
+  \end{titlepage}
+}
 
 % \DeclareRobustCommand{\makecertification}{
 %   \clearpages

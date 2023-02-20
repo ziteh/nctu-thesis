@@ -54,7 +54,7 @@
 \setCJKmainfont{TW-Kai} % modify for overleaf service
 
 % Your information goes here
-\input{nctuvars}
+\input{nfuvars}
 
 \begin{document}
 
@@ -63,11 +63,11 @@
 \frontmatter
 \pagenumbering{gobble}
 
-% 此處不自動產生交大封面改採插入pdf封面故註解
-% \makecover
+% 封面 自動生成或直接插入PDF檔二選一
+\makecover % LaTeX生成封面
+% \includepdf[pages={1}]{pdfs/cover.pdf} % 插入PDF檔封面
 
-% 以插入pdf檔方式加入封面及書名頁
-\includepdf[pages={1}]{pdfs/cover.pdf}
+% 插入書名頁PDF檔
 \includepdf[pages={1}]{pdfs/first_page.pdf}
 
 % 開始編羅馬數字頁碼
@@ -88,10 +88,9 @@
 % 論文浮水印 如不需要浮水印時註解此行
 \input{src/with-watermark.tex}
 
-% 摘要、致謝
+% 摘要、誌謝
 \input{abstract}
 \input{acknowledgements}
-
 
 % Table of Content
 \clearpages
