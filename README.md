@@ -1,6 +1,6 @@
 # 虎尾科大碩博士論文 XeLaTeX 模版
 
-## 前言
+> 給受夠了 Word 的排版總是跑掉、圖表編號亂跳、數學公式的編寫不夠方便，然後發現網路上的教學不知道為什麼都沒用的人。
 
 這個模版的前身是 [shaform](http://github.com/shaform) 的 [臺灣大學碩博士論文 XeLaTeX 模版](https://github.com/shaform/ntu-thesis) 與 [tzhuan](http://github.com/tzhuan) 的
 [臺灣大學碩博士論文 XeLaTeX 模板](https://github.com/tzhuan/ntu-thesis)。
@@ -12,16 +12,16 @@
 
 ## 用法
 
-本模板可以使用 [Overleaf](https://www.overleaf.com) 線上服務進行編譯，對於不想自己處理 LaTeX 環境的人很方便。
+本模板可以使用 [Overleaf](https://www.overleaf.com) 線上服務進行編譯，對於不想自己處理 LaTeX 環境的人很方便。這也是我個人主要的使用方式。
 
 想要在本機編譯的話，可以考慮 [TeX Live](https://www.tug.org/texlive/)+[TeX studio](https://www.texstudio.org/) 的組合，[VS Code](https://code.visualstudio.com/) 上也有一些 LaTeX 的相關插件，或使用 [`Makefile`](./Makefile)（未實際測試過）。
 
-:heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX*** 以支援中文。主編譯檔案爲 [`thesis.tex`](./thesis.tex)
+:heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX***。主編譯檔案爲 [`thesis.tex`](./thesis.tex)
 
 ## 下載
 
 您可以用以下任一種方式下載此模板：
-- 點擊右上角綠色的「Code」後點擊「Download ZIP」。
+- 點擊右上角的「Code」後點擊「Download ZIP」。
 - 使用 git clone 指令。
 
 ## 參考
@@ -29,6 +29,7 @@
 這裡列出一些可以參考的文章或實用的工具，對於使用 LaTeX 時很有幫助。
 
 ### 符號清單
+1. [常用 LaTeX 數學符號指令](https://hackmd.io/@CynthiaChuang/Basic-LaTeX-Commands)
 1. [List of LaTeX mathematical symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 1. [Symbol table](https://www.overleaf.com/latex/templates/symbol-table/fhqmttqvrnhk)
 
