@@ -48,4 +48,5 @@
 
 ## 備註
 
-shaform 版的 [wiki](https://github.com/shaform/ntu-thesis/wiki)
+- shaform 版的 [wiki](https://github.com/shaform/ntu-thesis/wiki)
+- 論文格式參考並根據「國立虎尾科技大學學位論文格式規範」（最後修訂為 110 年 10 月 19 日）之規定。
