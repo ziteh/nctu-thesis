@@ -102,6 +102,47 @@
   \end{titlepage}
 }
 
+% 書名頁格式
+\DeclareRobustCommand{\makefirstpage}{
+  \vspace{1cm}
+  \begin{singlespace}
+  \begin{center}
+    \vspace{1cm}
+    \fontsize{20}{32}\selectfont
+    \@titlezh\par
+    \@titleen\par
+    \vspace{1.5cm}
+    \fontsize{14}{27}\selectfont
+    \begin{tabular}{cccl}
+    研\enspace 究\enspace 生： & \@authorzh  & \hspace{4em} Student： & \!\@authoren \\
+    指導教授：                  & \@advisorzh & \hspace{4em} Advisor： & \!\@advisoren \\
+    \end{tabular} \\
+    \vspace{3.25cm}
+    \fontsize{14}{20}\selectfont
+    \@universityzh\par
+    \@institutezh\par
+    \@typezh{}\@classzh\par
+    \vspace{0.7cm}
+    {\fontsize{12}{21}\selectfont
+      A \@classen \, Submitted to \@instituteen\par
+      \@collegeen\par
+      \@universityen\par
+      in Partial Fulfillment of the Requirements \par
+      for the Degree of \@typeen{} of Science \par % 依所別或學位不同而有不同
+      in \par
+      XXX \par}
+    \vspace{\fill}
+    \fontsize{12}{20}\selectfont
+    \@monthen, \@yearen \\
+    Huwei, Yunlin, Taiwan (R.O.C.) \\
+    \vspace{1cm}
+    \fontsize{16}{16}\selectfont
+    中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
+  \end{center}
+  \end{singlespace}
+  \vspace{1cm}
+}
+
 % \DeclareRobustCommand{\makecertification}{
 %   \clearpages
 %   \begin{singlespace}

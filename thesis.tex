@@ -67,8 +67,9 @@
 \makecover % LaTeX生成封面
 % \includepdf[pages={1}]{pdfs/cover.pdf} % 插入PDF檔封面
 
-% 插入書名頁PDF檔
-\includepdf[pages={1}]{pdfs/first_page.pdf}
+% 書名頁 自動生成或直接插入PDF檔二選一
+\makefirstpage % LaTeX生成書名頁
+% \includepdf[pages={1}]{pdfs/first_page.pdf} % 插入PDF檔書名頁
 
 % 開始編羅馬數字頁碼
 \clearpages
