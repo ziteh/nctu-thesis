@@ -143,6 +143,41 @@
   \vspace{1cm}
 }
 
+% 摘要標頭（中/英文）
+\DeclareRobustCommand{\makeabstractheaderzh}{
+  \vspace{1cm}
+  \begin{center}
+    {\fontsize{20}{20}\selectfont
+    \@titlezh \\
+    }
+    \vspace{0.8cm}
+    {\fontsize{14}{14}\selectfont
+    \begin{tabular}{lcr}
+    學生：\@authorzh & \hspace{6cm} & 指導教授：\@advisorzh 
+    \end{tabular} \\
+    \vspace{0.5cm}
+    \@universityzh \@institutezh
+    }
+  \end{center}
+}
+\DeclareRobustCommand{\makeabstractheaderen}{
+  \vspace{1cm}
+  \begin{center}
+    {\fontsize{20}{20}\selectfont
+    \@titleen \\
+    }
+    \vspace{0.8cm}
+    {\fontsize{14}{14}\selectfont
+    \begin{tabular}{lcr}
+    Student: \@authoren & \hspace{4.5cm} & Advisor: \@advisoren 
+    \end{tabular} \\
+    \vspace{0.5cm}
+    \@instituteen \\
+    \@universityen
+    }
+  \end{center}
+}
+
 % \DeclareRobustCommand{\makecertification}{
 %   \clearpages
 %   \begin{singlespace}
@@ -184,8 +219,18 @@
    \quotation}
   {\endquotation}
 
-\newenvironment{abstracten}{\begin{quotationpage}{\@abstractnameen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
-\newenvironment{abstractzh}{\begin{quotationpage}{\@abstractnamezh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
+\newenvironment{headerquotationpage}[2]
+  {\clearpages
+   #2 % Header
+   {\fontsize{20}{20}\selectfont
+   \centerline{\textbf{\zhbf{#1}}}
+   }
+   \addcontentsline{toc}{chapter}{#1}
+   \quotation}
+  {\endquotation}
+
+\newenvironment{abstracten}{\begin{headerquotationpage}{\@abstractnameen}{\makeabstractheaderen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{headerquotationpage}}
+\newenvironment{abstractzh}{\begin{headerquotationpage}{\@abstractnamezh}{\makeabstractheaderzh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{headerquotationpage}}
 \newenvironment{acknowledgementsen}{\begin{quotationpage}{\@acknowledgementsen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
 \newenvironment{acknowledgementszh}{\begin{quotationpage}{\@acknowledgementszh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
 
