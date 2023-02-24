@@ -16,12 +16,12 @@
 
 :heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX***。
 
-## 檔案結構
+### 檔案結構
 
 大致說明一下各個檔案及資料夾的功能：
 
 - [`thesis.tex`](./thesis.tex)：主編譯檔。
-- `nfuthesis.cls`：LaTeX class 檔案。定義了此模板中的各種風格設定。
+- `nfuthesis.cls`：LaTeX class 檔案，定義了此模板中的各種風格設定。
 - `nfuvars.tex`：各項資訊變數，如論文標題、學校及系所等。
 - `thesis.bib`：參考文獻資料。
 - `abstract.tex`：摘要內容。
