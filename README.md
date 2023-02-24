@@ -22,7 +22,7 @@
 
 - [`thesis.tex`](./thesis.tex)：主編譯檔。
 - `nfuthesis.cls`：LaTeX class 檔案。定義了此模板中的各種風格設定。
-- `nfuvars.tex`：各資訊變數。
+- `nfuvars.tex`：各項資訊變數，如論文標題、學校及系所等。
 - `thesis.bib`：參考文獻資料。
 - `abstract.tex`：摘要內容。
 - `acknowledgements.tex`：誌謝內容。
