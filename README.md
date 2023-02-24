@@ -1,7 +1,5 @@
 # 虎尾科大碩博士論文 XeLaTeX 模版
 
-> 給受夠了 Word 的排版總是跑掉、圖表編號亂跳、數學公式的編寫不夠方便，然後發現網路上的教學不知道為什麼都沒用的人。
-
 這個模版的前身是 [shaform](http://github.com/shaform) 的 [臺灣大學碩博士論文 XeLaTeX 模版](https://github.com/shaform/ntu-thesis) 與 [tzhuan](http://github.com/tzhuan) 的
 [臺灣大學碩博士論文 XeLaTeX 模板](https://github.com/tzhuan/ntu-thesis)。
 同時也整合了一些 [qcl](https://github.com/qcl) 針對
@@ -16,9 +14,26 @@
 
 想要在本機編譯的話，可以考慮 [TeX Live](https://www.tug.org/texlive/)+[TeX studio](https://www.texstudio.org/) 的組合，[VS Code](https://code.visualstudio.com/) 上也有一些 LaTeX 的相關插件，或使用 [`Makefile`](./Makefile)（未實際測試過）。
 
-:heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX***。主編譯檔案爲 [`thesis.tex`](./thesis.tex)
+:heavy_exclamation_mark: 無論使用哪一種方式，編譯器記得要選用 ***XeLaTeX***。
 
-## 下載
+## 檔案結構
+
+大致說明一下各個檔案及資料夾的功能：
+
+- [`thesis.tex`](./thesis.tex)：主編譯檔。
+- `nfuthesis.cls`：LaTeX class 檔案。定義了此模板中的各種風格設定。
+- `nfuvars.tex`：各資訊變數。
+- `thesis.bib`：參考文獻資料。
+- `abstract.tex`：摘要內容。
+- `acknowledgements.tex`：誌謝內容。
+- `extended_abstract.tex`：英文論文大綱內容。
+- `chapers/`：各章節內容。
+- `tables/`：表格。
+- `figures/`：圖片。
+- `images/`：圖片檔。
+- `pdfs/`：PDF 檔。
+
+### 下載
 
 您可以用以下任一種方式下載此模板：
 - 點擊右上角的「Code」後點擊「Download ZIP」。
