@@ -1,5 +1,4 @@
-% author: Po-Hao Huang [https://github.com/Po-haoHuang]
-%         ziteh [https://github.com/ziteh]
+% author: ziteh [https://github.com/ziteh]
 
 % ----------------------------------------------------------------------------
 % "THE CHOCOLATE-WARE LICENSE":
@@ -13,9 +12,9 @@
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
-\DeclareRobustCommand{\@typezh}{碩士}
+\DeclareRobustCommand{\@typezh}{碩\; 士\; }
 \DeclareRobustCommand{\@classen}{Thesis}
-\DeclareRobustCommand{\@classzh}{論文}
+\DeclareRobustCommand{\@classzh}{論\; 文}
 \DeclareOption{phd}{\gdef\@typeen{Doctoral}\gdef\@typezh{博士}\gdef\@classen{Dissertation}}
 \DeclareOption{proposal}{\gdef\@typeen{Proposal for Doctoral}\gdef\@typezh{博士論文計畫提案書}\gdef\@classen{Dissertation}\gdef\@classzh{}}
 
@@ -63,38 +62,121 @@
 
 \DeclareRobustCommand{\clearpages}{\if@openright\cleardoublepage\else\clearpage\fi}
 
-% \DeclareRobustCommand{\makecover}{
-%   \begin{titlepage}
-%     \vspace{1cm}
-%     \begin{singlespace}
-%     \begin{center}
-%       \fontsize{18}{27}\selectfont
-%       \@universityzh\@collegezh\@institutezh\par
-%         \@typezh{}\@classzh\par
-%       {\fontsize{14}{21}\selectfont
-%         \@instituteen\par
-%         \@collegeen\par}
-%       {\fontsize{16}{24}\selectfont
-%         \@universityen\par
-%         \@typeen{} \@classen\par}
-%       \vspace{\fill}
-%       \@titlezh\par
-%       \@titleen\par
-%       \vspace{\fill}
-%       \@authorzh\\
-%       \@authoren\par
-%       \vspace{2cm}
-%       指導教授：\@advisorzh\\
-%       Advisor: \@advisoren\par
-%       \vspace{1.5cm}
-%       中華民國 \@yearzh 年 \@monthzh 月\\
-%       \@monthen, \@yearen
-%     \end{center}
-%     \end{singlespace}
-%     \vspace{1cm}
-%   \end{titlepage}
-% }
+% 封面格式
+\DeclareRobustCommand{\makecover}{
+  \begin{titlepage}
+    \vspace{1cm}
+    \begin{singlespace}
+    \begin{center}
+      \fontsize{36}{36}\selectfont
+      \@universityzh\par
+      \fontsize{28}{52}\selectfont
+      \@institutezh\par
+      \vspace{1cm}
+      \fontsize{24}{32}\selectfont
+      \@typezh{}\@classzh\par
+      % {\fontsize{14}{21}\selectfont
+      %   \@instituteen\par
+      %   \@collegeen\par}
+      % {\fontsize{16}{24}\selectfont
+      %   \@universityen\par
+      %   \@typeen{} \@classen\par}
+      % \vspace{\fill}
+      \vspace{3.25cm}
+      \fontsize{20}{32}\selectfont
+      \@titlezh\par
+      \textbf{\@titleen}\par
+      \vspace{\fill}
+      \fontsize{18}{27}\selectfont
+      \begin{tabular}{cc}
+      研\enspace 究\enspace 生： & \@authorzh \\
+      指導教授：                 & \@advisorzh \\
+      \end{tabular} \\
+      \vspace{2cm}
+      \fontsize{16}{16}\selectfont
+      中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
+      % \@monthen, \@yearen
+    \end{center}
+    \end{singlespace}
+    \vspace{1cm}
+  \end{titlepage}
+}
 
+% 書名頁格式
+\DeclareRobustCommand{\makefirstpage}{
+  \vspace{1cm}
+  \begin{singlespace}
+  \begin{center}
+    \vspace{1cm}
+    \fontsize{20}{32}\selectfont
+    \@titlezh\par
+    \@titleen\par
+    \vspace{1.5cm}
+    \fontsize{14}{27}\selectfont
+    \begin{tabular}{cccl}
+    研\enspace 究\enspace 生： & \@authorzh  & \hspace{4em} Student： & \!\@authoren \\
+    指導教授：                  & \@advisorzh & \hspace{4em} Advisor： & \!\@advisoren \\
+    \end{tabular} \\
+    \vspace{3.25cm}
+    \fontsize{14}{20}\selectfont
+    \@universityzh\par
+    \@institutezh\par
+    \@typezh{}\@classzh\par
+    \vspace{0.7cm}
+    {\fontsize{12}{21}\selectfont
+      A \@classen \, Submitted to \@instituteen\par
+      \@collegeen\par
+      \@universityen\par
+      in Partial Fulfillment of the Requirements \par
+      for the Degree of \@typeen{} of Science \par % 依所別或學位不同而有不同
+      in \par
+      XXX \par}
+    \vspace{\fill}
+    \fontsize{12}{20}\selectfont
+    \@monthen, \@yearen \\
+    Huwei, Yunlin, Taiwan (R.O.C.) \\
+    \vspace{1cm}
+    \fontsize{16}{16}\selectfont
+    中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
+  \end{center}
+  \end{singlespace}
+  \vspace{1cm}
+}
+
+% 摘要標頭（中/英文）
+\DeclareRobustCommand{\makeabstractheaderzh}{
+  \vspace{1cm}
+  \begin{center}
+    {\fontsize{20}{20}\selectfont
+    \@titlezh \\
+    }
+    \vspace{0.8cm}
+    {\fontsize{14}{14}\selectfont
+    \begin{tabular}{lcr}
+    學生：\@authorzh & \hspace{6cm} & 指導教授：\@advisorzh 
+    \end{tabular} \\
+    \vspace{0.5cm}
+    \@universityzh \@institutezh
+    }
+  \end{center}
+}
+\DeclareRobustCommand{\makeabstractheaderen}{
+  \vspace{1cm}
+  \begin{center}
+    {\fontsize{20}{20}\selectfont
+    \@titleen \\
+    }
+    \vspace{0.8cm}
+    {\fontsize{14}{14}\selectfont
+    \begin{tabular}{lcr}
+    Student: \@authoren & \hspace{4.5cm} & Advisor: \@advisoren 
+    \end{tabular} \\
+    \vspace{0.5cm}
+    \@instituteen \\
+    \@universityen
+    }
+  \end{center}
+}
 
 % \DeclareRobustCommand{\makecertification}{
 %   \clearpages
@@ -137,10 +219,50 @@
    \quotation}
   {\endquotation}
 
-\newenvironment{abstracten}{\begin{quotationpage}{\@abstractnameen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
-\newenvironment{abstractzh}{\begin{quotationpage}{\@abstractnamezh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
+\newenvironment{headerquotationpage}[2]
+  {\clearpages
+   #2 % Header
+   {\fontsize{20}{20}\selectfont
+   \centerline{\textbf{\zhbf{#1}}}
+   }
+   \addcontentsline{toc}{chapter}{#1}
+   \quotation}
+  {\endquotation}
+
+\newenvironment{abstracten}{\begin{headerquotationpage}{\@abstractnameen}{\makeabstractheaderen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{headerquotationpage}}
+\newenvironment{abstractzh}{\begin{headerquotationpage}{\@abstractnamezh}{\makeabstractheaderzh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{headerquotationpage}}
 \newenvironment{acknowledgementsen}{\begin{quotationpage}{\@acknowledgementsen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
 \newenvironment{acknowledgementszh}{\begin{quotationpage}{\@acknowledgementszh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
+
+% 英文論文大綱（Extended Abstract）
+\newenvironment{extendedabstract}
+{\clearpage
+ \chapter*{\centerline{Extended Abstract}}
+ \addcontentsline{toc}{chapter}{Extended Abstract}
+ \vspace{-1.25cm}
+ \begin{center}
+   {\fontsize{16}{22}\selectfont
+   \@titlezh \\
+   \@titleen \\
+   }
+   \vspace{1cm}
+   {\fontsize{12}{14}\selectfont
+   \begin{tabular}{lcr}
+   Student: \@authoren & \hspace{4.5cm} & Advisor: \@advisoren 
+   \end{tabular} \\
+   \vspace{1cm}
+   \@instituteen \\
+   \@collegeen, \@universityen \\
+   }
+   \vspace{0.5cm}
+   {\fontsize{16}{16}\selectfont
+   \textbf{Abstract}
+   }
+ \end{center}
+ \quotation
+ \begin{spacing}{\@onehalfline}
+ \renewcommand\thesection{\arabic{section}.}}
+{\end{spacing}\endquotation}
 
 \setcounter{tocdepth}{2}
 \pagestyle{plain}

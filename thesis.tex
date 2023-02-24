@@ -54,7 +54,7 @@
 \setCJKmainfont{TW-Kai} % modify for overleaf service
 
 % Your information goes here
-\input{nctuvars}
+\input{nfuvars}
 
 \begin{document}
 
@@ -63,12 +63,21 @@
 \frontmatter
 \pagenumbering{gobble}
 
-% 此處不自動產生交大封面改採插入pdf封面故註解
-% \makecover
+% 封面 自動生成或直接插入PDF檔二選一
+\makecover % LaTeX生成封面
+% \includepdf[pages={1}]{pdfs/cover.pdf} % 插入PDF檔封面
 
-% 以插入pdf檔方式加入封面及書名頁
-\includepdf[pages={1}]{pdfs/cover.pdf}
-\includepdf[pages={1}]{pdfs/first_page.pdf}
+% 書名頁 自動生成或直接插入PDF檔二選一
+\makefirstpage % LaTeX生成書名頁
+% \includepdf[pages={1}]{pdfs/first_page.pdf} % 插入PDF檔書名頁
+
+% 插入PDF檔論文審定書、著作權審定書等等
+% \addcontentsline{toc}{chapter}{中文論文口試委員會審定書} % 加入到目錄中
+\includepdf[pages={1}, pagecommand={}]{pdfs/ch.pdf}
+% \addcontentsline{toc}{chapter}{Thesis Certificate} % 加入到目錄中
+% \includepdf[pages={1}, pagecommand={}]{pdfs/en.pdf}
+% \addcontentsline{toc}{chapter}{論文著作權授權書} % 加入到目錄中
+% \includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
 
 % 開始編羅馬數字頁碼
 \clearpages
@@ -77,21 +86,12 @@
 \pagenumbering{roman}
 \phantomsection
 
-% 插入論文審定書 著作權審定書等等
-\addcontentsline{toc}{chapter}{中文論文口試委員會審定書}
-\includepdf[pages={1}, pagecommand={}]{pdfs/ch.pdf}
-\addcontentsline{toc}{chapter}{Thesis Certificate}
-\includepdf[pages={1}, pagecommand={}]{pdfs/en.pdf}
-\addcontentsline{toc}{chapter}{論文著作權授權書}
-\includepdf[pages={1}, pagecommand={}]{pdfs/copyright.pdf}
-
 % 論文浮水印 如不需要浮水印時註解此行
 \input{src/with-watermark.tex}
 
-% 摘要、致謝
+% 摘要、誌謝
 \input{abstract}
 \input{acknowledgements}
-
 
 % Table of Content
 \clearpages
@@ -132,6 +132,9 @@
 \bibliography{thesis}
 \@startappendix
 
-% 交大圖書館規定附錄在參考文獻之後
+% 附錄在參考文獻之後
 \input{chapters/otherbib}
+
+% 英文論文大綱
+\input{extended_abstract}
 \end{document}

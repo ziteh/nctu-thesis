@@ -1,6 +1,43 @@
 \clearpage
 \appendix
-\centering{\huge{附錄}}
+\chapter{附錄一}
 \label{appendix}
 
-測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業測試文字我想畢業
+這裡展示了一些 \LaTeX{} 的用法，供參考用。
+
+\vspace{2cm}
+
+尤拉恆等式（Euler's identity）被理察·費曼（Richard Feynman）喻爲「最美的公式」：
+\begin{equation}
+    e^{i \pi} + 1 = 0 \label{euler-identity}
+\end{equation}
+
+\vspace{2cm}
+
+PID控制器可以表示為式\eqref{pid}，其中$e$為誤差，定義為目標設定值減去實際回授值：$e=V_{exp}-V_{act}$。
+
+\begin{equation}
+    u(t) = \underbrace{K_p e(t)}_{\rm P-term}
+         + \underbrace{K_i \int_{0}^{t} e(\tau)\mathrm{d}\tau}_{\rm I-term}
+         + \underbrace{K_d \frac{\mathrm{d}}{\mathrm{d}t} e(t)}_{\rm D-term}
+    \label{pid}
+\end{equation}
+
+\begin{align}
+^{base}\mathbf{T}_{end} &= \; ^0\mathbf{T}_2 = \; ^0\mathbf{T}_1 \; ^1\mathbf{T}_2 \\
+&=
+\begin{bmatrix}
+\cos \theta_1&0&\sin \theta_1&0\\
+\sin \theta_1&0&-\cos \theta_1&0\\
+0&1&0&0\\
+0&0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+\cos \theta_2&-\sin \theta_2&0&l_1\cos \theta_2\\
+\sin \theta_2&\cos \theta_2&0&l_1\sin \theta_2\\
+0&0&1&d_2\\
+0&0&0&1
+\end{bmatrix}
+\end{align}
+
+上下標：$^1_2x^3_4$
