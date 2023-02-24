@@ -234,6 +234,36 @@
 \newenvironment{acknowledgementsen}{\begin{quotationpage}{\@acknowledgementsen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
 \newenvironment{acknowledgementszh}{\begin{quotationpage}{\@acknowledgementszh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
 
+% 英文論文大綱（Extended Abstract）
+\newenvironment{extendedabstract}
+{\clearpage
+ \chapter*{\centerline{Extended Abstract}}
+ \addcontentsline{toc}{chapter}{Extended Abstract}
+ \vspace{-1.25cm}
+ \begin{center}
+   {\fontsize{16}{22}\selectfont
+   \@titlezh \\
+   \@titleen \\
+   }
+   \vspace{1cm}
+   {\fontsize{12}{14}\selectfont
+   \begin{tabular}{lcr}
+   Student: \@authoren & \hspace{4.5cm} & Advisor: \@advisoren 
+   \end{tabular} \\
+   \vspace{1cm}
+   \@instituteen \\
+   \@collegeen, \@universityen \\
+   }
+   \vspace{0.5cm}
+   {\fontsize{16}{16}\selectfont
+   \textbf{Abstract}
+   }
+ \end{center}
+ \quotation
+ \begin{spacing}{\@onehalfline}
+ \renewcommand\thesection{\arabic{section}.}}
+{\end{spacing}\endquotation}
+
 \setcounter{tocdepth}{2}
 \pagestyle{plain}
 \@setspacing
