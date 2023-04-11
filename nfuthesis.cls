@@ -86,13 +86,13 @@
       \fontsize{20}{32}\selectfont
       \@titlezh\par
       \textbf{\@titleen}\par
-      \vspace{\fill}
+      \vspace{4cm}
       \fontsize{18}{27}\selectfont
       \begin{tabular}{cc}
       研\enspace 究\enspace 生： & \@authorzh \\
       指導教授：                 & \@advisorzh \\
       \end{tabular} \\
-      \vspace{2cm}
+      \vspace{\fill}
       \fontsize{16}{16}\selectfont
       中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
       % \@monthen, \@yearen
@@ -121,7 +121,8 @@
     \fontsize{14}{20}\selectfont
     \@universityzh\par
     \@institutezh\par
-    \@typezh{}\@classzh\par
+    碩士論文\par
+    % \@typezh{}\@classzh\par
     \vspace{0.7cm}
     {\fontsize{12}{21}\selectfont
       A \@classen \, Submitted to \@instituteen\par
@@ -130,12 +131,12 @@
       in Partial Fulfillment of the Requirements \par
       for the Degree of \@typeen{} of Science \par % 依所別或學位不同而有不同
       in \par
-      XXX \par}
+      Electronic Engineering \par}
     \vspace{\fill}
     \fontsize{12}{20}\selectfont
     \@monthen, \@yearen \\
     Huwei, Yunlin, Taiwan (R.O.C.) \\
-    \vspace{1cm}
+    \vspace{0.4cm}
     \fontsize{16}{16}\selectfont
     中\; 華\; 民\; 國\; \@yearzh 年\; \@monthzh 月 \\
   \end{center}
@@ -155,7 +156,7 @@
     \begin{tabular}{lcr}
     學生：\@authorzh & \hspace{6cm} & 指導教授：\@advisorzh 
     \end{tabular} \\
-    \vspace{0.5cm}
+    \vspace{0.8cm}
     \@universityzh \@institutezh
     }
   \end{center}
@@ -171,7 +172,7 @@
     \begin{tabular}{lcr}
     Student: \@authoren & \hspace{4.5cm} & Advisor: \@advisoren 
     \end{tabular} \\
-    \vspace{0.5cm}
+    \vspace{0.8cm}
     \@instituteen \\
     \@universityen
     }
@@ -363,7 +364,7 @@
   \renewcommand{\bibname}{參考文獻}
 
   \DeclareRobustCommand{\@startappendix}{
-  \titleformat{\chapter}{\centering\Huge\bfseries}{附錄 \thechapter}{1em}{}
+  \titleformat{\chapter}{\centering\Huge\bfseries\vspace*{-3.5cm}}{附錄 \thechapter}{1em}{}
   \titlecontents{chapter}[0em]{}{\makebox[4.1em][l]{附錄 \thecontentslabel}}{}{\cftdotfill{\cftdotsep}\contentspage}
   \appendix}
 \else
