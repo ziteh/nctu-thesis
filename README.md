@@ -20,8 +20,8 @@
 
 大致說明一下各個檔案及資料夾的功能：
 
-- [`thesis.tex`](./thesis.tex)：主編譯檔。
-- `nfuthesis.cls`：LaTeX class 檔案，定義了此模板中的各種風格設定。
+- [`thesis.tex`](./thesis.tex)：主編譯檔。可調章節順序、部分格式設定及要引用之套件包等。
+- `nfuthesis.cls`：LaTeX class 檔案，定義了此模板中的各種風格設定。也包含封面、書名頁、摘要標題及英文論文大綱標題的格式。
 - `nfuvars.tex`：各項資訊變數，如論文標題、學校及系所等。
 - `thesis.bib`：參考文獻資料。
 - `abstract.tex`：摘要內容。
@@ -37,6 +37,7 @@
 
 您可以用以下任一種方式下載此模板：
 - 點擊右上角的「Code」後點擊「Download ZIP」。
+- 到 [Releases](https://github.com/ziteh/nfu-thesis/releases) 頁面下載。
 - 使用 git clone 指令。
 
 ## 參考
