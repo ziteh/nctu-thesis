@@ -217,8 +217,8 @@
   {\clearpages
    \chapter*{\centerline{#1}}
    \addcontentsline{toc}{chapter}{#1}
-   \quotation}
-  {\endquotation}
+  }
+  {}
 
 \newenvironment{headerquotationpage}[2]
   {\clearpages
@@ -226,14 +226,15 @@
    {\fontsize{20}{20}\selectfont
    \centerline{\textbf{\zhbf{#1}}}
    }
+   \vspace{0.6cm}
    \addcontentsline{toc}{chapter}{#1}
-   \quotation}
-  {\endquotation}
+  }
+  {}
 
-\newenvironment{abstracten}{\begin{headerquotationpage}{\@abstractnameen}{\makeabstractheaderen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{headerquotationpage}}
-\newenvironment{abstractzh}{\begin{headerquotationpage}{\@abstractnamezh}{\makeabstractheaderzh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{headerquotationpage}}
-\newenvironment{acknowledgementsen}{\begin{quotationpage}{\@acknowledgementsen}\begin{spacing}{\@doubleline}}{\end{spacing}\end{quotationpage}}
-\newenvironment{acknowledgementszh}{\begin{quotationpage}{\@acknowledgementszh}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
+\newenvironment{abstracten}{\begin{headerquotationpage}{\@abstractnameen}{\makeabstractheaderen}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{headerquotationpage}}
+\newenvironment{abstractzh}{\begin{headerquotationpage}{\@abstractnamezh}{\makeabstractheaderzh}\begin{spacing}{\@oneline}}{\end{spacing}\end{headerquotationpage}}
+\newenvironment{acknowledgementsen}{\begin{quotationpage}{\@acknowledgementsen}\begin{spacing}{\@onehalfline}}{\end{spacing}\end{quotationpage}}
+\newenvironment{acknowledgementszh}{\begin{quotationpage}{\@acknowledgementszh}\begin{spacing}{\@oneline}}{\end{spacing}\end{quotationpage}}
 
 % 英文論文大綱（Extended Abstract）
 \newenvironment{extendedabstract}
@@ -260,10 +261,9 @@
    \textbf{Abstract}
    }
  \end{center}
- \quotation
  \begin{spacing}{\@onehalfline}
  \renewcommand\thesection{\arabic{section}.}}
-{\end{spacing}\endquotation}
+{\end{spacing}}
 
 \setcounter{tocdepth}{2}
 \pagestyle{plain}
