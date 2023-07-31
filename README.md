@@ -8,6 +8,10 @@
 再來則由 [Po-haoHuang](https://github.com/Po-haoHuang) 在交通大學撰寫論文期間又做了些許更動，使其成為適合[交通大學的模板](https://github.com/Po-haoHuang/nctu-thesis)。
 最後由 [ZiTe](https://github.com/ziteh) 撰寫碩士論文時修改成適合虎尾科大的格式。
 
+> [!NOTE]  
+> 本人使用此模板撰寫的碩論已於 2023 年 7 月 31 日通過學校圖書館的審核。  
+> 本論文模板格式參考並根據「國立虎尾科技大學學位論文格式規範」（110 年 10 月 19 日。110 學年度第 1 次教務會議修訂）之規定。
+
 ## 用法
 
 本模板可以使用 [Overleaf](https://www.overleaf.com) 線上服務進行編譯，對於不想自己處理 LaTeX 環境的人很方便。這也是我個人主要的使用方式。
@@ -18,12 +22,12 @@
 
 ### 檔案結構
 
-大致說明一下各個檔案及資料夾的功能：
+各檔案及資料夾的功能：
 
 - [`thesis.tex`](./thesis.tex)：主編譯檔。可調章節順序、部分格式設定及要引用之套件包等。
 - `nfuthesis.cls`：LaTeX class 檔案，定義了此模板中的各種風格設定。也包含封面、書名頁、摘要標題及英文論文大綱標題的格式。
 - `nfuvars.tex`：各項資訊變數，如論文標題、學校及系所等。
-- `thesis.bib`：參考文獻資料。
+- `thesis.bib`：Bib 格式參考文獻資料。
 - `abstract.tex`：摘要內容。
 - `acknowledgements.tex`：誌謝內容。
 - `extended_abstract.tex`：英文論文大綱內容。
@@ -44,25 +48,18 @@
 
 這裡列出一些可以參考的文章或實用的工具，對於使用 LaTeX 時很有幫助。
 
-### 符號清單
-1. [常用 LaTeX 數學符號指令](https://hackmd.io/@CynthiaChuang/Basic-LaTeX-Commands)
-1. [List of LaTeX mathematical symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
-1. [Symbol table](https://www.overleaf.com/latex/templates/symbol-table/fhqmttqvrnhk)
-
-### 數學
-1. [編寫數學公式](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
-
-### 視覺化公式編輯器
-1. [公式編輯器](https://www.latexlive.com/##)
-1. [方程式編輯器](https://editor.codecogs.com/)
-1. [手寫辨識](https://webdemo.myscript.com/views/math/index.html)
-
-### 參考文獻管理
-1. [Mendeley](https://www.mendeley.com/search/)
-1. [Zotero](https://www.zotero.org/)
-1. [EndNote](https://endnote.com/)
-
-## 備註
-
-- shaform 版的 [wiki](https://github.com/shaform/ntu-thesis/wiki)
-- 論文格式參考並根據「國立虎尾科技大學學位論文格式規範」（110 年 10 月 19 日。110 學年度第 1 次教務會議修訂）之規定。
+- 符號清單
+  1. [常用 LaTeX 數學符號指令](https://hackmd.io/@CynthiaChuang/Basic-LaTeX-Commands)
+  1. [List of LaTeX mathematical symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+  1. [Symbol table](https://www.overleaf.com/latex/templates/symbol-table/fhqmttqvrnhk)
+- 數學
+  1. [編寫數學公式](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+- 視覺化公式編輯器
+  1. [公式編輯器](https://www.latexlive.com/##)
+  1. [方程式編輯器](https://editor.codecogs.com/)
+  1. [手寫辨識](https://webdemo.myscript.com/views/math/index.html)
+- 文獻管理
+  1. [Mendeley](https://www.mendeley.com/search/)
+  1. [Zotero](https://www.zotero.org/)
+  1. [EndNote](https://endnote.com/)
+- shaform 的 LaTeX 模板 [Wiki](https://github.com/shaform/ntu-thesis/wiki)
