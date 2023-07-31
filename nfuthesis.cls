@@ -349,8 +349,8 @@
   \fi\fi\fi\fi\fi\fi\fi\fi\fi
   }
 
-  \titleformat{\chapter}{\centering\Huge\bfseries\vspace*{-3.5cm}}{第\naiveZhNum{\thechapter}章}{1em}{} % 章標題
-  \titlecontents{chapter}[0em]{}{\makebox[4.1em][l]{第\naiveZhNum{\thecontentslabel}章}}{}{\cftdotfill{\cftdotsep}\contentspage}
+  \titleformat{\chapter}{\centering\Huge\bfseries\vspace*{-3.5cm}}{第\hspace{-0.25em}\naiveZhNum{\thechapter}章}{1em}{} % 章標題
+  \titlecontents{chapter}[0em]{}{\makebox[4.1em][l]{第\hspace{-0.25em}\naiveZhNum{\thecontentslabel}章}}{}{\cftdotfill{\cftdotsep}\contentspage}
 
   \floatname{algorithm}{演算法}
   \renewcommand{\algorithmicrequire}{\textbf{輸入：}}
